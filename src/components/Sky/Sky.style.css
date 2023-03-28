@@ -1,0 +1,23 @@
+.sky {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: honeydew;
+  /* background: url("/images/Sunny.png"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sunny {
+  background-image: url("../../../public/images/Sunny.png");
+}
+
+.rainy {
+  background-image: url("../../../public/images/Rainy.png");
+}
+
+.cloudy {
+  background-image: url("../../../public/images/Cloudy.png");
+}

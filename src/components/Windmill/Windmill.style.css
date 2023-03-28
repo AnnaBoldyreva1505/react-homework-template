@@ -1,0 +1,56 @@
+/* Стили, отвечающие за основание ветряка */
+
+.windmill {
+  width: 13vw;
+  height: 20vw;
+  background-image: url(../../../public/images/Windmill-base.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative;
+  z-index: 1;
+}
+
+/* Стили пропеллера */
+.vanes {
+  position: absolute;
+  width: 23vw;
+  height: 23vw;
+  background-image: url(../../../public/images/Windmill-vane.png);
+  background-size: contain;
+  z-index: 2;
+  top: -50%;
+  left: -39%;
+}
+
+/* Анимация */
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.spin {
+  /* Вот здесь мы будем использовать созданную анимацию, чтобы заставить пропеллер вращаться  */
+  animation: rotating 2s linear infinite;
+}
+
+/* Медиа-запросы для отображения игры на мобильных устройствах */
+@media screen and (max-width: 600px) {
+  .windmill {
+    width: 13vw;
+    height: 30vw;
+  }
+
+  .vanes {
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+    z-index: 2;
+    top: -43%;
+    left: -65%;
+  }
+}

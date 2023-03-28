@@ -1,0 +1,67 @@
+.game-field {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.mills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: -10%;
+  position: absolute;
+  width: 100%;
+}
+
+.grass {
+  width: 100%;
+  height: 30%;
+  background: url("../../../public/images/Grass.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.lamp {
+  width: 120px;
+  height: 120px;
+  background: url("../../../public/images/Lamp-off.png");
+  background-size: contain;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.isOn {
+  background: url("../../../public/images/Lamp-on.png");
+  background-size: contain;
+}
+
+.timer {
+  color: white;
+  font-size: 40px;
+}
+
+@media screen and (max-width: 700px) {
+  .grass {
+    height: 50%;
+  }
+
+  .mills {
+    margin-top: 6vw;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .grass {
+    height: 50%;
+  }
+
+  .mills {
+    margin-top: 40vw;
+  }
+}
